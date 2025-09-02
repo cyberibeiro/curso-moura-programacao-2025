@@ -18,8 +18,16 @@ namespace Calculadora
             Console.WriteLine($"Soma: {n1 + n2}");
             Console.WriteLine($"Subtração: {n1 - n2}");
             Console.WriteLine($"Multiplicação: {n1 * n2}");
-            Console.WriteLine($"Divisão: {n1 / n2}");
-            Console.WriteLine($"Resto da divisão: {(double) n1 % n2}");
+
+            if (n2 != 0)
+            {
+                Console.WriteLine($"Divisão: {(double)n1 / n2}");
+                Console.WriteLine($"Resto da divisão:  {n1 % n2}");
+            }
+            else
+            {
+                Console.WriteLine("Impossível dividir por ZERO!");
+            }
 
             Console.WriteLine("--Pressione ENTER para encerrar--");
             Console.ReadLine();

@@ -15,7 +15,12 @@ namespace Media
             Console.Write("Insira a 3º nota: ");
             double n3 = double.Parse(Console.ReadLine());
 
-            Console.WriteLine($"Média final: {(n1 + n2 + n3) / 3}");
+            double MediaFinal = (n1 + n2 + n3) / 3;
+
+            if (MediaFinal > 7)
+                Console.WriteLine("Aprovado");
+            else
+                Console.WriteLine("Reprovado");
 
             Console.WriteLine("--Pressione ENTER para encerrar--");
             Console.ReadLine();

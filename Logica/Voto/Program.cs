@@ -17,27 +17,38 @@ namespace Voto
             • Se o usuário votou em branco: "Voto branco contabilizado..
         Se o voto for diferente de todas as opções acima: "Voto inválido..."
         */
-
-            const int CANDIDATOUM = 1;
-            const int CANDIDATODOIS = 2;
-            const int CANDIDATOTRES = 3;
-            const int CANDIDATOQUATRO = 4;
-            const int VOTONULO = 5;
-            const int VOTOBRANCO = 6;
+            Console.WriteLine("--Voto--\n");
+            Console.WriteLine("1, 2, 3, 4 votos para os respectivos candidatos");
+            Console.WriteLine("5 voto nulo");
+            Console.WriteLine("6 voto em branco");
 
             Console.Write("Qual seu voto: ");
+
             int voto = int.Parse(Console.ReadLine());
 
-            if (voto == VOTOBRANCO)
+            /* if (voto == 6)
+                 Console.WriteLine("Voto branco contabilizado..");
+             else if (voto == 5)
+                 Console.WriteLine("Voto nulo contabilizado...");
+             else if (voto > 6)
+                 Console.WriteLine("Voto invalido");
+             else if (voto < 1)
+                 Console.WriteLine("Voto invalido");
+             else
+                 Console.WriteLine("Voto contabilizado"); */
+
+            #region outra forma
+            /*if (voto == 6)
                 Console.WriteLine("Voto branco contabilizado..");
-            else if (voto == VOTONULO)
+            else if (voto == 5)
                 Console.WriteLine("Voto nulo contabilizado...");
             else if (voto > 6)
                 Console.WriteLine("Voto invalido");
             else if (voto < 1)
                 Console.WriteLine("Voto invalido");
             else
-                Console.WriteLine("Voto contabilizado");
+                Console.WriteLine("Voto contabilizado"); */
+            #endregion
 
             Console.WriteLine("--Pressione ENTER para encerrar--");
             Console.ReadLine();

@@ -30,24 +30,20 @@ namespace Salario
             Console.WriteLine("--Salario--\n");
 
             Console.Write("Digite o valor que você recebe por hora: ");
-            double valorPorHora = double.Parse(Console.ReadLine());
+            double valorGanhoPorHora = double.Parse(Console.ReadLine());
             Console.Write("Digite quantas horas você trabalha no mês: ");
-            double horasTrabalho = double.Parse(Console.ReadLine());
+            double horasTrabalhadasNoMes = double.Parse(Console.ReadLine());
 
-            double salarioBruto = valorPorHora * horasTrabalho;
-            double impostoRenda = (salarioBruto * 11) / 100 ;
-            double inss = (salarioBruto * 8) / 100;
-            double sindicato = (salarioBruto * 5) / 100;
-            double salarioLiquido = salarioBruto - impostoRenda - inss - sindicato; 
+            double salarioBruto = valorGanhoPorHora * horasTrabalhadasNoMes;
+            double ir = salarioBruto * 0.11;
+            double inss = salarioBruto * 0.08;
+            double sindicato = salarioBruto * 0.05;
 
-            Console.WriteLine($"\n+Salário Bruto: R$ {salarioBruto:0.00}");
-            Console.WriteLine($"-IR (11%): R$ {impostoRenda:0.00}");
-            Console.WriteLine($"-INSS (8%): R$ {inss:0.00}");   
-            Console.WriteLine($"-Sindicato (5%): R$ {sindicato:0.00}"); 
-            Console.WriteLine($"=Salário Líquido: R$ {salarioLiquido:0.00}");
-
-            Console.WriteLine($"\n+Salário Bruto: R$ {salarioBruto:0.00}\n-IR (11%): R$ {impostoRenda:0.00}\n-INSS (8%): R$ {inss:0.00}" +
-                $"\n-Sindicato (5%): R$ {sindicato:0.00}\n=Salário Líquido: R$ {salarioLiquido:0.00}\n");
+            Console.WriteLine($"\n+ Salário Bruto : R$ {salarioBruto:0.00}");
+            Console.WriteLine($"- IR (11%) : R$ {ir:0.00}");
+            Console.WriteLine($"- INSS (8%) : R$ {inss:0.00}");   
+            Console.WriteLine($"- Sindicato (5%) : R$ {sindicato:0.00}"); 
+            Console.WriteLine($"= Salário Líquido : R$ {salarioBruto - ir - inss - sindicato}");
 
             Console.WriteLine("Pressione ENTER para finalizar o programa");
             Console.ReadLine();

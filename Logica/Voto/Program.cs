@@ -6,8 +6,7 @@ namespace Voto
     {
         static void Main(string[] args)
         {
-                            /* Em uma eleição presidencial, existem quatro candidatos.Os votos são informados através de códigos.
-        * Os códigos utilizados são:    /* Em uma eleição presidencial, existem quatro candidatos.Os votos são informados através de códigos.
+        /* Em uma eleição presidencial, existem quatro candidatos.Os votos são informados através de códigos.
         * Os códigos utilizados são:
             • 1,2,3,4 votos para os respectivos candidatos;
             • 5 voto nulo; 

@@ -32,10 +32,10 @@ namespace Pescador
             multaPagaPeloPescador = pesoExcedidoEmKg * MULTAPORKGEXCEDIDO;
         }
 
-            Console.WriteLine($"Peso excedido: {pesoExcedidoEmKg:0.00} kg");
+            Console.WriteLine($"\nPeso excedido: {pesoExcedidoEmKg:0.00} kg");
             Console.WriteLine($"Multa: R$ {multaPagaPeloPescador}");
 
-            Console.WriteLine("Pressione ENTER para finalizar o programa");
+            Console.WriteLine("\nPressione ENTER para finalizar o programa");
             Console.ReadLine();
         }
     }

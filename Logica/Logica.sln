@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tabuada", "Tabuada\Tabuada.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posto", "Posto\Posto.csproj", "{2E8254E1-CB32-4206-83C0-ED91CCFF133E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParesImpares", "ParesImpares\ParesImpares.csproj", "{CC5B72DC-323B-4A86-9F7D-1431D762A9FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{2E8254E1-CB32-4206-83C0-ED91CCFF133E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E8254E1-CB32-4206-83C0-ED91CCFF133E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E8254E1-CB32-4206-83C0-ED91CCFF133E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC5B72DC-323B-4A86-9F7D-1431D762A9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC5B72DC-323B-4A86-9F7D-1431D762A9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC5B72DC-323B-4A86-9F7D-1431D762A9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC5B72DC-323B-4A86-9F7D-1431D762A9FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

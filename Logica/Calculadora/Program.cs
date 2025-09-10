@@ -8,25 +8,24 @@ namespace Calculadora
         {
             Console.WriteLine("--Calculadora--");
 
-            Console.Write("Digite um número: ");
+            Console.Write("Digite um número:");
             int n1 = int.Parse(Console.ReadLine());
-            Console.Write("Digite outro número: ");
+            Console.Write("Digite outro número:");
             int n2 = int.Parse(Console.ReadLine());
 
-            // Operadores aritméticos
-
+            //Operadores aritméticos
             Console.WriteLine($"Soma: {n1 + n2}");
             Console.WriteLine($"Subtração: {n1 - n2}");
             Console.WriteLine($"Multiplicação: {n1 * n2}");
 
             if (n2 != 0)
             {
-                Console.WriteLine($"Divisão: {(double)n1 / n2}");
-                Console.WriteLine($"Resto da divisão:  {n1 % n2}");
+                Console.WriteLine($"Divisão: {(double)n1 / n2}"); //cast 
+                Console.WriteLine($"Resto da divisão: {n1 % n2}"); //operador módulo
             }
             else
             {
-                Console.WriteLine("Impossível dividir por ZERO!");
+                Console.WriteLine("Impossível dividir por ZERO");
             }
 
             Console.WriteLine("--Pressione ENTER para encerrar--");

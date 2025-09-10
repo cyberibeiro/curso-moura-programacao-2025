@@ -8,13 +8,13 @@ namespace Numeros
     {
         static void Main(string[] args)
         {
-            Console.Write("Digite um número: ");
+            Console.Write("Digite um número:");
             int n1 = int.Parse(Console.ReadLine());
 
             Console.WriteLine($"Dobro: {n1 * 2}");
             Console.WriteLine($"Triplo: {n1 * 3}");
 
-            Console.WriteLine("Digite ENTER para encerrar: ");
+            Console.WriteLine("Pressione ENTER para encerrar");
             Console.ReadLine();
         }
     }

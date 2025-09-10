@@ -6,46 +6,68 @@ namespace Media
     {
         static void Main(string[] args)
         {
-            /* REQUISITOS
-
-            - Verificar se o aluno está APROVADO, em RECUPERAÇÃO ou REPROVADO de acordo com faltas e notas:
-
-            Total de faltas para ser reprovado => 20
-
-            calcular a média das notas(3):
-            média >= 7 Aprovado.
-            média entre 5 e menor que 7 Recuperação.
-            média < 5 Reprovado.*/
-
             const int NUMEROMAXIMODEFALTAS = 20;
-                
+
             Console.WriteLine("--Média--");
 
-            Console.Write("Insira o número de faltas: ");
-            double faltas  = double.Parse(Console.ReadLine());
+            Console.Write("Digite o número de faltas:");
+            int faltas = int.Parse(Console.ReadLine());
 
             if (faltas <= NUMEROMAXIMODEFALTAS)
             {
-                Console.Write("Insira a 1º nota: ");
-                double n1 = double.Parse(Console.ReadLine());
-                Console.Write("Insira a 2º nota: ");
-                double n2 = double.Parse(Console.ReadLine());
-                Console.Write("Insira a 3º nota: ");
-                double n3 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Digite 3 notas:");
 
-                double Media = (n1 + n2 + n3) / 3;
-    
-                Console.WriteLine($"Média: {Media:0.00}"); 
+                Console.Write("Nota 1:");
+                double nota1 = double.Parse(Console.ReadLine());
 
-                if (Media >= 7)
+                Console.Write("Nota 2:");
+                double nota2 = double.Parse(Console.ReadLine());
+
+                Console.Write("Nota 3:");
+                double nota3 = double.Parse(Console.ReadLine());
+
+                double media = (nota1 + nota2 + nota3) / 3;
+
+                Console.WriteLine($"Média: {media:0.00}");
+
+                if (media >= 7)
                     Console.WriteLine("Aprovado");
-                else if (Media >= 5)
+                else if (media >= 5)
                     Console.WriteLine("Recuperação");
                 else
                     Console.WriteLine("Reprovado");
             }
             else
-                Console.WriteLine($"Reprovado por faltas");
+                Console.WriteLine("Reprovado por faltas");
+
+            /*
+             *  >= 7 Aprovado - ok
+                Entre 5 e menor que 7 Recuperação
+                < 5 Reprovado
+             */
+
+            /*
+            if (media < 5)
+                Console.WriteLine("Reprovado");
+            else if (media < 7)
+                Console.WriteLine("Recuperação");
+            else
+                Console.WriteLine("Aprovado");
+
+            if (media >= 7)
+                Console.WriteLine("Aprovado");
+            else if (media < 5)
+                Console.WriteLine("Reprovado");
+            else
+                Console.WriteLine("Recuperação");
+            */
+
+            /*
+            if (media > 7)
+                Console.WriteLine("Aprovado");
+            if (media <= 7)
+                Console.WriteLine("Reprovado");
+            */
 
             Console.WriteLine("--Pressione ENTER para encerrar--");
             Console.ReadLine();

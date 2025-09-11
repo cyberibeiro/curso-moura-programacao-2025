@@ -19,14 +19,62 @@ namespace Voto
     {
         static void Main(string[] args)
         {
+            #region "****Solução com voto do tipo int e Estrutura de Seleção (switch) com loop****"
+
             const int CANDIDATO1 = 1, CANDIDATO2 = 2, CANDIDATO3 = 3, CANDIDATO4 = 4, NULO = 5, BRANCO = 6;
+            int votoCandidatos = 0;
+            int votoNulo = 0;
+            int votoBranco = 0;
+            int votoInvalido = 0;
+            string continuar = "s";
 
-            Console.WriteLine("--Voto--\n");
-            Console.WriteLine("1,2,3,4 votos para os respectivos candidatos");
-            Console.WriteLine("5 voto nulo");
-            Console.WriteLine("6 voto em branco");
+            do
 
-            Console.Write("Voto:");
+            {
+                Console.WriteLine("--Voto--\n");
+                Console.WriteLine("1,2,3,4 votos para os respectivos candidatos");
+                Console.WriteLine("5 voto nulo");
+                Console.WriteLine("6 voto em branco");
+
+                Console.Write("Voto:");
+                int voto = int.Parse(Console.ReadLine());
+
+                switch (votos)
+                {
+                    case CANDIDATO1:
+                    case CANDIDATO2:
+                    case CANDIDATO3:
+                    case CANDIDATO4:
+                        Console.WriteLine("Voto contabilizado com sucesso...");
+                        votoCandidatos++;
+                        break;
+                    case NULO:
+                        Console.WriteLine("Voto nulo contabilizado...");
+                        votoNulo++;
+                        break;
+                    case BRANCO:
+                        Console.WriteLine("Voto branco contabilizado...");
+                        votoBranco++;
+                        break;
+                    default:
+                        Console.WriteLine("Voto inválido...");
+                        votoInvalido++;
+                        break;
+
+                    Console.WriteLine("\nGostaria de inserir mais um voto (s/n)? ");
+
+                        Console.Clear();
+                }
+            }while (continuar == "s");
+
+            Console.WriteLine($"\n--Votos contabilizados--");
+
+            Console.WriteLine($"\nTotal de votos para candidatos: {votoCandidatos}");
+            Console.WriteLine($"Total de votos nulos: {votoNulo}");
+            Console.WriteLine($"Total de votos em branco: {votoBranco}");
+            Console.WriteLine($"Total de votos inválidos: {votoInvalido}");
+
+            #endregion
 
             #region "Solução com voto do tipo int e ED encadeada e operadores lógicos - E"
             /*            
